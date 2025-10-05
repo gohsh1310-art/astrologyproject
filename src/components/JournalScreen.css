@@ -1,0 +1,243 @@
+.journal-screen {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.journal-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.journal-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 #00F0FF;
+  margin-bottom: 10px;
+}
+
+.journal-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  opacity: 0.7;
+}
+
+.journal-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  color: #000000;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 #000000;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: #00F0FF;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+.filter-btn.active {
+  background: #FF005C;
+  color: #FFFFFF;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.empty-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.empty-text {
+  font-size: 14px;
+  color: #000000;
+  opacity: 0.7;
+}
+
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.entry-card {
+  background: #FFFFFF;
+  border: 4px solid #000000;
+  padding: 24px;
+  box-shadow: 6px 6px 0 #000000;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: slideIn 0.3s ease-out;
+}
+
+.entry-card:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.entry-date {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.entry-tag {
+  padding: 4px 12px;
+  border: 2px solid #000000;
+  background: #00F0FF;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.entry-prompt {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.entry-preview {
+  font-size: 13px;
+  color: #000000;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.entry-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.entry-modal-content {
+  background: #FFFFFF;
+  border: 4px solid #000000;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 8px 8px 0 #000000;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.modal-prompt {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.modal-tag {
+  padding: 6px 16px;
+  border: 3px solid #000000;
+  background: #00F0FF;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal-content {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+.btn-delete {
+  padding: 14px 24px;
+  border: 3px solid #000000;
+  background: #FF005C;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 #000000;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+@media (max-width: 768px) {
+  .journal-title {
+    font-size: 24px;
+  }
+
+  .entries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-modal-content {
+    padding: 24px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+}

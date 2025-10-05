@@ -1,0 +1,239 @@
+.onboarding {
+  min-height: 100vh;
+  background: #00F0FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.onboarding-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.onboarding-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 3px;
+  text-shadow: 4px 4px 0 #FF005C;
+  margin-bottom: 10px;
+}
+
+.onboarding-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 2px;
+}
+
+.onboarding-card {
+  background: #FFFFFF;
+  border: 4px solid #000000;
+  padding: 40px;
+  box-shadow: 8px 8px 0 #000000;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+.step.active {
+  background: #FF005C;
+  color: #FFFFFF;
+}
+
+.step-line {
+  width: 80px;
+  height: 3px;
+  background: #000000;
+}
+
+.form-step {
+  animation: slideIn 0.3s ease-out;
+}
+
+.step-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  box-shadow: 4px 4px 0 #000000;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 4px 4px 0 #FF005C;
+}
+
+.form-hint {
+  font-size: 11px;
+  color: #000000;
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.location-presets {
+  margin-bottom: 24px;
+}
+
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preset-btn {
+  padding: 12px;
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.preset-btn:hover {
+  background: #00F0FF;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  border: 3px solid #000000;
+  background: #FF005C;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 #000000;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+.btn-secondary {
+  padding: 16px 24px;
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  color: #000000;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 #000000;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #00F0FF;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.onboarding-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #000000;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .onboarding-title {
+    font-size: 32px;
+  }
+
+  .onboarding-card {
+    padding: 24px;
+  }
+
+  .preset-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}

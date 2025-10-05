@@ -1,0 +1,146 @@
+.chart-screen {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.chart-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 #FFD700;
+  margin-bottom: 20px;
+}
+
+.chart-info {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 6px 6px 0 #000000;
+  text-align: left;
+}
+
+.chart-info p {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.chart-info p:last-child {
+  margin-bottom: 0;
+}
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.planet-card {
+  background: #FFFFFF;
+  border: 4px solid #000000;
+  padding: 24px;
+  box-shadow: 6px 6px 0 #000000;
+  transition: all 0.2s;
+  animation: slideIn 0.3s ease-out;
+}
+
+.planet-card:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.planet-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.planet-icon {
+  font-size: 32px;
+}
+
+.planet-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.planet-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.planet-sign {
+  padding: 12px;
+  border: 3px solid #000000;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.planet-degree {
+  padding: 10px;
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.planet-house {
+  padding: 10px;
+  border: 3px solid #000000;
+  background: #00F0FF;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.chart-actions {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-reset {
+  padding: 16px 32px;
+  border: 3px solid #000000;
+  background: #FF005C;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 6px 6px 0 #000000;
+  transition: all 0.2s;
+}
+
+.btn-reset:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+@media (max-width: 768px) {
+  .chart-title {
+    font-size: 24px;
+  }
+
+  .planets-grid {
+    grid-template-columns: 1fr;
+  }
+}
